@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrispin Joseph | Data Science & Analytics Portfolio</title>
+    <meta name="description" content="Portfolio of Chrispin Joseph - Data Analytics and Data Science professional.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="glow-orb orb-primary"></div>
+        <div class="glow-orb orb-secondary"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Chrispin<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education-certifications">Education & Certifications</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-overlay-dim"></div>
+        <div class="hero-container">
+            
+            <!-- 1. Profile Avatar (Moved to Left) -->
+            <div class="hero-avatar-wrapper reveal" style="z-index: 2; position: relative; animation-delay: 1s;">
+                <div class="avatar-glow-ring"></div>
+                <!-- Placeholder for actual avatar image -->
+                <img src="avatar.jpg" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'300\' height=\'300\' style=\'background-color:%2310101a;\'><text x=\'50%\' y=\'50%\' fill=\'white\' font-size=\'14\' text-anchor=\'middle\' dy=\'.3em\'>Your Avatar Here</text></svg>'" alt="Chrispin Joseph" class="profile-avatar">
+            </div>
+
+            <!-- 2. Text Content (Centered, nudged structurally via CSS margins) -->
+            <div class="hero-content reveal" style="z-index: 2; position: relative;">
+                <div class="typing-container">
+                    <p class="greeting typing-text-1">Hello, I'm</p>
+                </div>
+                <div class="typing-container">
+                    <h1 class="name typing-text-2">Chrispin Joseph</h1>
+                </div>
+                <h2 class="title-animation" style="animation: fadeIn 2s forwards; opacity: 0; animation-delay: 2.5s;">
+                    <span>Data Analytics</span>
+                    <span class="divider">|</span>
+                    <span>Data Science</span>
+                    <span class="divider">|</span>
+                    <span>Business Intelligence</span>
+                </h2>
+                <p class="tagline" style="animation: fadeIn 2s forwards; opacity: 0; animation-delay: 3s;">I turn raw data into meaningful insights that drive business decisions. From data cleaning to dashboards, I create solutions that deliver real impact.</p>
+                <div class="cta-group" style="animation: fadeIn 2s forwards; opacity: 0; animation-delay: 3.5s;">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    <!-- CV Download Full Button -->
+                    <a href="resume.pdf" download="Chrispin_Joseph_Resume.pdf" class="btn btn-outline" title="Download CV">
+                        <i class="fas fa-file-pdf" style="margin-right: 6px;"></i> Download CV
+                    </a>
+                </div>
+                <div class="social-links-hero" style="animation: fadeIn 2s forwards; opacity: 0; animation-delay: 4s;">
+                    <a href="https://www.linkedin.com/in/chrispin-joseph-b5240b33a/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/chrispin-7" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:chrispinjos@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <!-- 3. Floating Cards (Far Right) -->
+            <div class="hero-visual reveal-right" style="z-index: 2; position: relative; animation-delay: 2s;">
+                <div class="glass-illustration">
+                    <div class="floating-card metric-card">
+                        <i class="fas fa-chart-pie"></i>
+                        <div class="card-text">
+                            <span>Data Analytics</span>
+                            <div class="bar-chart">
+                                <div class="bar" style="height: 60%"></div>
+                                <div class="bar" style="height: 100%"></div>
+                                <div class="bar" style="height: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floating-card ai-card">
+                        <i class="fas fa-chart-line"></i>
+                        <div class="card-text">
+                            <span>Business Intelligence</span>
+                            <div class="pulse-line"></div>
+                        </div>
+                    </div>
+                    <div class="floating-card db-card">
+                        <i class="fas fa-brain"></i>
+                        <div class="card-text">
+                            <span>Data Science</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="section-header reveal">
+            <h2>About Me</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="about-content">
+            <div class="glass-panel reveal text-center-content" style="max-width: 900px; margin: 0 auto; text-align: center;">
+                <p>I’m Chrispin Joseph, an aspiring Data Analyst with hands-on experience in SQL, Python, Excel, and Power BI, working on real-world datasets to uncover actionable insights. I enjoy transforming raw data into meaningful visualizations that support business decision-making.</p>
+                <p>Alongside analytics, I have experience in data science, applying machine learning techniques and building end-to-end projects. Currently pursuing a Working Professional MBA in Analytics & Data Science.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications Section -->
+    <section id="education-certifications" class="section">
+        <div class="section-header reveal">
+            <h2>Education & Certifications</h2>
+            <div class="underline"></div>
+        </div>
+        
+        <div class="edu-cert-split">
+            <!-- Left Side: Education Timeline -->
+            <div class="edu-column glass-panel reveal">
+                <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-date">2026 - 2028</div>
+                        <div class="timeline-title">MBA, Analytics & Data Science</div>
+                        <div class="timeline-desc">Manipal University Jaipur (Online | Working Professionals)</div>
+                    </li>
+                    <li>
+                        <div class="timeline-date">2024 - 2025</div>
+                        <div class="timeline-title">PG Diploma in Data Science & AI</div>
+                        <div class="timeline-desc">Netcom Academy</div>
+                    </li>
+                    <li>
+                        <div class="timeline-date">2021 - 2024</div>
+                        <div class="timeline-title">B.Com in Computer Applications</div>
+                        <div class="timeline-desc">Kerala University (CGPA: 6.7/10)</div>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Right Side: Certifications -->
+            <div class="cert-column glass-panel reveal" style="transition-delay: 0.2s">
+                <h3><i class="fas fa-certificate"></i> Certifications</h3>
+                <div class="cert-list">
+                    <div class="cert-item">
+                        <div class="cert-icon-small"><i class="fab fa-microsoft"></i></div>
+                        <div class="cert-info">
+                            <h4>Preparing Data for Analysis with Microsoft Excel</h4>
+                            <p class="cert-issuer">Microsoft • Jul 2025</p>
+                            <p class="cert-id" style="color: var(--primary-color);">Credential ID: 6KG724IS4ZU6</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-item">
+                        <div class="cert-icon-small"><i class="fas fa-chart-bar"></i></div>
+                        <div class="cert-info">
+                            <h4>Data Analysis and Visualization with Power BI</h4>
+                            <p class="cert-issuer">Microsoft • Jun 2025</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-item">
+                        <div class="cert-icon-small"><i class="fas fa-brain"></i></div>
+                        <div class="cert-info">
+                            <h4>Artificial Intelligence Fundamentals</h4>
+                            <p class="cert-issuer">IBM • Apr 2025</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-item">
+                        <div class="cert-icon-small"><i class="fas fa-video"></i></div>
+                        <div class="cert-info">
+                            <h4>OpenCV Bootcamp</h4>
+                            <p class="cert-issuer">OpenCV University • May 2025</p>
+                            <p class="cert-id" style="color: var(--primary-color);">Credential ID: de66d7cd05ae49538c113d50d0424cc7</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="section-header reveal">
+            <h2>Skills & Expertise</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="skills-grid-2x2">
+            <div class="skill-category glass-panel reveal">
+                <div class="skill-icon"><i class="fas fa-chart-pie"></i></div>
+                <h3>Data Analysis & Business Intelligence</h3>
+                <div class="skill-tags">
+                    <span class="highlight-skill">SQL (Joins, Aggregations, Window Functions)</span>
+                    <span>PostgreSQL</span>
+                    <span class="highlight-skill">Excel (Pivot Tables, XLOOKUP, Dashboards)</span>
+                    <span class="highlight-skill">Power BI (DAX, Data Modeling, KPI Dashboards)</span>
+                    <span>Pandas, NumPy</span>
+                    <span>Data Cleaning & EDA</span>
+                    <span>Data Visualization</span>
+                    <span>KPI & Business Metrics Analysis</span>
+                </div>
+            </div>
+
+            <div class="skill-category glass-panel reveal" style="transition-delay: 0.1s">
+                <div class="skill-icon"><i class="fas fa-code"></i></div>
+                <h3>Programming & Tools</h3>
+                <div class="skill-tags">
+                    <span class="highlight-skill">Python</span>
+                    <span class="highlight-skill">SQL</span>
+                    <span>Jupyter Notebook</span>
+                    <span>Git & GitHub</span>
+                    <span>Streamlit</span>
+                </div>
+            </div>
+
+            <div class="skill-category glass-panel reveal" style="transition-delay: 0.2s">
+                <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                <h3>Machine Learning & Deep Learning</h3>
+                <div class="skill-tags">
+                    <span>Scikit-learn</span>
+                    <span>Regression & Classification</span>
+                    <span>Feature Engineering & Preprocessing</span>
+                    <span>Model Evaluation</span>
+                    <span>Hyperparameter Tuning</span>
+                    <span>CNN, ResNet-18</span>
+                    <span>Grad-CAM, OpenCV</span>
+                </div>
+            </div>
+
+            <div class="skill-category glass-panel reveal" style="transition-delay: 0.3s">
+                <div class="skill-icon"><i class="fas fa-briefcase"></i></div>
+                <h3>Business Analytics & Domain Skills</h3>
+                <div class="skill-tags">
+                    <span>Customer Segmentation</span>
+                    <span>Revenue & Sales Analysis</span>
+                    <span>Funnel Analysis</span>
+                    <span>Cohort Analysis</span>
+                    <span>A/B Testing</span>
+                    <span>KPI Design</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+        <div class="section-header reveal">
+            <h2>Experience</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="experience-list">
+            <div class="exp-card glass-panel reveal">
+                <div class="exp-header">
+                    <div>
+                        <h3>Data Science Intern</h3>
+                        <h4 class="company">Netcom Academy, Kochi</h4>
+                    </div>
+                    <span class="date-badge">Aug 2025 - Jan 2026</span>
+                </div>
+                <ul class="exp-details">
+                    <li>Performed <strong>data cleaning, transformation, and exploratory data analysis (EDA)</strong> to prepare analysis-ready datasets and generate business insights.</li>
+                    <li>Built <strong>interactive Power BI dashboards</strong> to track KPIs and support data-driven decision-making.</li>
+                    <li>Mentored junior students by providing guidance on <strong>data analysis concepts, machine learning fundamentals, tools, and project implementation</strong>.</li>
+                    <li>Assisted in <strong>debugging and improving student projects</strong>, ensuring accurate data processing and analysis workflows.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="section-header reveal">
+            <h2>Projects</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card glass-panel reveal">
+                <div class="project-content">
+                    <span class="project-type">Data Analytics</span>
+                    <h3>Olist E-Commerce Sales & Customer Analytics</h3>
+                    <p>Analyzed 11,000+ e-commerce transactions to uncover customer behavior and revenue trends. Performed data cleaning using Python and extracted insights with SQL. Built Excel dashboards to track KPIs such as sales performance, customer segmentation, and order trends.</p>
+                    <p class="impact-line">Delivered insights into customer behavior and revenue trends to support data-driven business decisions.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span> <span class="tech-tag">SQL</span> <span class="tech-tag">Excel</span>
+                    </div>
+                    <div class="project-link-icon mt-4">
+                        <a href="https://github.com/chrispin-7/olist-ecommerce-customer-segmentation" target="_blank" class="github-icon-link" aria-label="GitHub Repository" title="View Code"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card glass-panel reveal" style="transition-delay: 0.1s">
+                <div class="project-content">
+                    <span class="project-type">Data Analytics & BI</span>
+                    <h3>CRM Lead Intelligence & Conversion Analytics</h3>
+                    <p>Analyzed a 19,000+ real-world CRM dataset to uncover lead conversion trends and sales performance. Built interactive Power BI dashboards (DAX) with executive and drill-down views to track KPIs like conversion rate (45%), lead funnel, and channel performance. Delivered insights on revenue distribution, sales rep contribution, and regional performance to support data-driven decisions.</p>
+                    <p class="impact-line">Identified key conversion drivers and improved visibility into sales funnel performance.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span> <span class="tech-tag">Pandas</span> <span class="tech-tag">Power BI</span> <span class="tech-tag">DAX</span>
+                    </div>
+                    <div class="project-link-icon mt-4">
+                        <a href="https://github.com/chrispin-7/CRM-Lead-Management-Dashboard" target="_blank" class="github-icon-link" aria-label="GitHub Repository" title="View Code"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card glass-panel reveal" style="transition-delay: 0.2s">
+                <div class="project-content">
+                    <span class="project-type">Data Science (NLP)</span>
+                    <h3>AI-Powered Support Ticket Classification</h3>
+                    <p>Developed an NLP-based system to automate customer support ticket classification. Fine-tuned a DistilBERT model using Hugging Face Transformers for accurate text classification. Built a Streamlit application for real-time predictions and efficient ticket categorization.</p>
+                    <p class="impact-line">Automated ticket classification to improve support efficiency and response time.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span> <span class="tech-tag">Hugging Face</span> <span class="tech-tag">DistilBERT</span> <span class="tech-tag">Streamlit</span>
+                    </div>
+                    <div class="project-link-icon mt-4">
+                        <a href="https://github.com/chrispin-7/customer-support-automation-system" target="_blank" class="github-icon-link" aria-label="GitHub Repository" title="View Code"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card glass-panel reveal" style="transition-delay: 0.3s">
+                <div class="project-content">
+                    <span class="project-type">Computer Vision</span>
+                    <h3>Car Damage Detection & Classification</h3>
+                    <p>Built a deep learning model using ResNet-18 to detect and classify car damage from images. Applied transfer learning and data augmentation to improve model performance. Deployed a Streamlit application for real-time image-based predictions.</p>
+                    <p class="impact-line">Enabled accurate real-time damage detection for faster assessment and decision-making.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">PyTorch</span> <span class="tech-tag">ResNet-18</span> <span class="tech-tag">OpenCV</span> <span class="tech-tag">Streamlit</span>
+                    </div>
+                    <div class="project-link-icon mt-4">
+                        <a href="https://github.com/chrispin-7/Car_Damage_Prediction" target="_blank" class="github-icon-link" aria-label="GitHub Repository" title="View Code"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="section-header reveal">
+            <h2>Get In Touch</h2>
+            <div class="underline"></div>
+            <p class="contact-subtitle">Interested in collaborating or have an open role? Let's connect.</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info glass-panel reveal">
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                    <div>
+                        <h4>Email</h4>
+                        <a href="mailto:chrispinjos@gmail.com">chrispinjos@gmail.com</a>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-phone"></i></div>
+                    <div>
+                        <h4>Phone</h4>
+                        <a href="tel:+917034679427">+91 7034679427</a>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon"><i class="fab fa-linkedin"></i></div>
+                    <div>
+                        <h4>LinkedIn</h4>
+                        <a href="https://www.linkedin.com/in/chrispin-joseph-b5240b33a/" target="_blank">linkedin.com/in/chrispin-joseph</a>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon"><i class="fab fa-github"></i></div>
+                    <div>
+                        <h4>GitHub</h4>
+                        <a href="https://github.com/chrispin-7" target="_blank">github.com/chrispin-7</a>
+                    </div>
+                </div>
+            </div>
+            
+            <form class="contact-form glass-panel reveal" style="transition-delay: 0.1s" onsubmit="event.preventDefault(); alert('Message feature to be implemented with backend/API!');">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Chrispin Joseph. All Rights Reserved.</p>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/chrispin-joseph-b5240b33a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/chrispin-7" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
