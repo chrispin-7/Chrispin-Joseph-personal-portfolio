@@ -103,7 +103,7 @@ if (contactForm) {
             let json = await response.json();
             if (response.status == 200) {
                 submitBtn.innerHTML = '<i class="fas fa-check"></i> Sent Successfully!';
-                result.innerHTML = json.message || "Message sent successfully!";
+                result.innerHTML = "👉 Thanks! Your message has been sent. I’ll get back to you soon.";
                 result.style.color = "var(--primary-color)";
                 result.style.display = "block";
                 contactForm.reset();
@@ -126,8 +126,16 @@ if (contactForm) {
             setTimeout(() => {
                 submitBtn.innerHTML = originalBtnText;
                 submitBtn.disabled = false;
-                result.style.display = "none";
-            }, 3000);
+                
+                // Smooth fade out
+                result.style.transition = 'opacity 0.6s ease';
+                result.style.opacity = '0';
+                setTimeout(() => {
+                    result.style.display = 'none';
+                    result.style.opacity = '1'; // reset for next time
+                }, 600);
+                
+            }, 5000); // 5 seconds before fading out
         });
     });
 }
