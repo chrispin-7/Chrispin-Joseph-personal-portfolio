@@ -73,8 +73,10 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Contact Form Submission (FormSubmit API)
-const contactForm = document.querySelector('.contact-form');
+// Contact Form Submission (Web3Forms API)
+const contactForm = document.getElementById('contact-form');
+const result = document.getElementById('form-result');
+
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -83,37 +85,48 @@ if (contactForm) {
         const originalBtnText = submitBtn.innerHTML;
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         submitBtn.disabled = true;
+        result.style.display = 'none';
 
-        const formData = new FormData(this);
-        const data = Object.fromEntries(formData);
+        const formData = new FormData(contactForm);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
 
-        fetch('https://formsubmit.co/ajax/chrispinjos@gmail.com', {
+        fetch('https://api.web3forms.com/submit', {
             method: 'POST',
             headers: { 
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             },
-            body: JSON.stringify(data)
+            body: json
         })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success === "true" || data.success === true) {
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
                 submitBtn.innerHTML = '<i class="fas fa-check"></i> Sent Successfully!';
+                result.innerHTML = json.message || "Message sent successfully!";
+                result.style.color = "var(--primary-color)";
+                result.style.display = "block";
                 contactForm.reset();
-                setTimeout(() => {
-                    submitBtn.innerHTML = originalBtnText;
-                    submitBtn.disabled = false;
-                }, 3000);
             } else {
-                throw new Error('Form submission failed');
+                console.log(response);
+                result.innerHTML = json.message || "Something went wrong!";
+                result.style.color = "red";
+                result.style.display = "block";
+                submitBtn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Error';
             }
         })
         .catch(error => {
             console.error('Error:', error);
-            submitBtn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Error. Try Again.';
+            result.innerHTML = "Something went wrong!";
+            result.style.color = "red";
+            result.style.display = "block";
+            submitBtn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Error';
+        })
+        .finally(() => {
             setTimeout(() => {
                 submitBtn.innerHTML = originalBtnText;
                 submitBtn.disabled = false;
+                result.style.display = "none";
             }, 3000);
         });
     });
